@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - "8"
+sudo: false
+os:
+  - osx
+install:
+  - npm install --ignore-scripts
+script:
+  - npm test
+notifications:
+  slack: 4iota:P76C6qX8Ko2ev68l9uu4L6v6

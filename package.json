@@ -1,0 +1,27 @@
+{
+  "name": "homebridge-unixcontrol",
+  "preferGlobal": "true",
+  "version": "1.0.0",
+  "description": "Homebridge plugin for unixControl",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "node src/test.js",
+    "start": "node src/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sahilchaddha/homebridge-unixcontrol.git"
+  },
+  "keywords": [
+    "homebridge",
+    "unixcontrol",
+    "remote",
+    "mac"
+  ],
+  "author": "Sahil Chaddha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sahilchaddha/homebridge-unixcontrol/issues"
+  },
+  "homepage": "https://github.com/sahilchaddha/homebridge-unixcontrol#readme"
+}
