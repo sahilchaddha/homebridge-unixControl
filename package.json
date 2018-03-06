@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/sahilchaddha/homebridge-unixcontrol/issues"
   },
-  "homepage": "https://github.com/sahilchaddha/homebridge-unixcontrol#readme"
+  "homepage": "https://github.com/sahilchaddha/homebridge-unixcontrol#readme",
+  "dependencies": {
+    "request": "^2.83.0"
+  }
 }
