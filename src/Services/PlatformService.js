@@ -20,13 +20,13 @@ function PlatformService(homebridge) {
 
 PlatformService.prototype.addPlatforms = function(homebridge) {
     homebridge.registerPlatform(pluginName, "PowerPlatform", powerPlatform, true)
-    // homebridge.registerPlatform(pluginName, "SystemStatsPlatform", systemStatsPlatform, true)
-    // homebridge.registerPlatform(pluginName, "BrowserPlatform", browserPlatform, true)
-    // homebridge.registerPlatform(pluginName, "WifiPlatform", wifiPlatform, true)
-    // homebridge.registerPlatform(pluginName, "BluetoothPlatform", bluetoothPlatform, true)
-    // homebridge.registerPlatform(pluginName, "SystemSpyPlatform", systemSpyPlatform, true)
-    // homebridge.registerPlatform(pluginName, "MusicPlatform", musicPlatform, true)
-    // homebridge.registerPlatform(pluginName, "CustomPlatform", customPlatform, true)
+    homebridge.registerPlatform(pluginName, "SystemStatsPlatform", systemStatsPlatform, true)
+    homebridge.registerPlatform(pluginName, "BrowserPlatform", browserPlatform, true)
+    homebridge.registerPlatform(pluginName, "WifiPlatform", wifiPlatform, true)
+    homebridge.registerPlatform(pluginName, "BluetoothPlatform", bluetoothPlatform, true)
+    homebridge.registerPlatform(pluginName, "SystemSpyPlatform", systemSpyPlatform, true)
+    homebridge.registerPlatform(pluginName, "MusicPlatform", musicPlatform, true)
+    homebridge.registerPlatform(pluginName, "CustomPlatform", customPlatform, true)
 }
 
 module.exports = PlatformService
