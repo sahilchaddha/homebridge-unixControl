@@ -16,7 +16,8 @@
     "homebridge",
     "unixcontrol",
     "remote",
-    "mac"
+    "mac",
+    "homebridge-plugin"
   ],
   "author": "Sahil Chaddha",
   "license": "ISC",
@@ -27,5 +28,9 @@
   "dependencies": {
     "request": "^2.83.0",
     "url": "^0.11.0"
+  },
+  "engines": {
+    "node": ">=5.0.0",
+    "homebridge": ">=0.4.5"
   }
 }
