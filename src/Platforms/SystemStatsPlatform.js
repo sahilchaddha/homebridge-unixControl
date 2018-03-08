@@ -1,6 +1,6 @@
 
 function SystemStatsPlatform(log, config, api) {
-    this.platformLogger = log //debug, info, warn, wrror, log
+    this.platformLogger = log 
     this.platformConfig = config
     this.platformAPI = api
     this.accessories = []
