@@ -18,13 +18,15 @@ platforms: [
                     "platform": "PowerPlatform",
                     "name": "Unix Remote Controls",
                     "ipAddress": "192.168.1.4",
-                    "portNumber": "3000"
+                    "portNumber": "3000",
+                    "token": "abcd"
                 },
                 {
                     "platform": "MusicPlatform",
                     "name": "Unix Remote Controls",
                     "ipAddress": "192.168.1.4",
-                    "portNumber": "3000"
+                    "portNumber": "3000",
+                    "token": "abcd"
                 }
     ]
 ```
