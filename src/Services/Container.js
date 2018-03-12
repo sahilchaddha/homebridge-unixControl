@@ -1,4 +1,5 @@
 var Service, Characteristic, Accessory, hap, UUIDGen
+const pluginName = "homebridge-unixcontrol"
 
 function Container() {
     Service = null

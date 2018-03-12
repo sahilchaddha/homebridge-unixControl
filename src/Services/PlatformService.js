@@ -7,7 +7,6 @@ var systemSpyPlatform = require('../Platforms/SystemSpy/SystemSpyPlatform.js')
 var musicPlatform = require('../Platforms/Music/MusicPlatform.js')
 var customPlatform = require('../Platforms/Custom/CustomPlatform.js')
 var container = require('./Container.js')
-const pluginName = "homebridge-unixcontrol"
 
 function PlatformService(homebridge) { 
     container.set(homebridge)
@@ -16,14 +15,14 @@ function PlatformService(homebridge) {
 }
 
 PlatformService.prototype.addPlatforms = function(homebridge) {
-    homebridge.registerPlatform(pluginName, "PowerPlatform", powerPlatform, true)
-    homebridge.registerPlatform(pluginName, "SystemStatsPlatform", systemStatsPlatform, true)
-    homebridge.registerPlatform(pluginName, "BrowserPlatform", browserPlatform, true)
-    homebridge.registerPlatform(pluginName, "WifiPlatform", wifiPlatform, true)
-    homebridge.registerPlatform(pluginName, "BluetoothPlatform", bluetoothPlatform, true)
-    homebridge.registerPlatform(pluginName, "SystemSpyPlatform", systemSpyPlatform, true)
-    homebridge.registerPlatform(pluginName, "MusicPlatform", musicPlatform, true)
-    homebridge.registerPlatform(pluginName, "CustomPlatform", customPlatform, true)
+    homebridge.registerPlatform(container.pluginName, "PowerPlatform", powerPlatform, true)
+    homebridge.registerPlatform(container.pluginName, "SystemStatsPlatform", systemStatsPlatform, true)
+    homebridge.registerPlatform(container.pluginName, "BrowserPlatform", browserPlatform, true)
+    homebridge.registerPlatform(container.pluginName, "WifiPlatform", wifiPlatform, true)
+    homebridge.registerPlatform(container.pluginName, "BluetoothPlatform", bluetoothPlatform, true)
+    homebridge.registerPlatform(container.pluginName, "SystemSpyPlatform", systemSpyPlatform, true)
+    homebridge.registerPlatform(container.pluginName, "MusicPlatform", musicPlatform, true)
+    homebridge.registerPlatform(container.pluginName, "CustomPlatform", customPlatform, true)
 }
 
 module.exports = PlatformService
