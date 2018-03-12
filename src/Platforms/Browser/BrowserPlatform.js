@@ -14,7 +14,9 @@ function BrowserPlatform(log, config, api) {
     this.platformConfig = config
     this.platformAPI = api
     this.accessories = []
-    registerAccesories.call(this)  
+    this.platformAPI.on('didFinishLaunching', function() {
+        registerAccesories.call(this)  
+    }.bind(this))
 }
 
 BrowserPlatform.prototype.configureAccessory = function(accessory) {
@@ -52,8 +54,6 @@ function registerAccesories() {
     })
     
     platform.accessories = platform.accessories.concat(newAccessories)
-
-    console.log(platform.accessories)
     platform.platformAPI.registerPlatformAccessories(container.pluginName, platformName, newAccessories)
 }
 

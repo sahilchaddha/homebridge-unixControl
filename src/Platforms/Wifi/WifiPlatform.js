@@ -9,7 +9,9 @@ function WifiPlatform(log, config, api) {
     this.platformConfig = config
     this.platformAPI = api
     this.accessories = []
-    registerAccesories.call(this)      
+    this.platformAPI.on('didFinishLaunching', function() {
+        registerAccesories.call(this)  
+    }.bind(this))
 }
 
 WifiPlatform.prototype.configureAccessory = function(accessory) {
