@@ -1,12 +1,12 @@
 var Service, Characteristic, Accessory, hap, UUIDGen
-var powerPlatform = require('../Platforms/PowerPlatform.js')
-var systemStatsPlatform = require('../Platforms/SystemStatsPlatform.js')
-var browserPlatform = require('../Platforms/BrowserPlatform.js')
-var wifiPlatform = require('../Platforms/WifiPlatform.js')
-var bluetoothPlatform = require('../Platforms/BluetoothPlatform.js')
-var systemSpyPlatform = require('../Platforms/SystemSpyPlatform.js')
-var musicPlatform = require('../Platforms/MusicPlatform.js')
-var customPlatform = require('../Platforms/CustomPlatform.js')
+var powerPlatform = require('../Platforms/Power/PowerPlatform.js')
+var systemStatsPlatform = require('../Platforms//SystemStats/SystemStatsPlatform.js')
+var browserPlatform = require('../Platforms/Browser/BrowserPlatform.js')
+var wifiPlatform = require('../Platforms/Wifi/WifiPlatform.js')
+var bluetoothPlatform = require('../Platforms/Bluetooth/BluetoothPlatform.js')
+var systemSpyPlatform = require('../Platforms/SystemSpy/SystemSpyPlatform.js')
+var musicPlatform = require('../Platforms/Music/MusicPlatform.js')
+var customPlatform = require('../Platforms/Custom/CustomPlatform.js')
 const pluginName = "homebridge-unixcontrol"
 
 function PlatformService(homebridge) { 
