@@ -15,18 +15,28 @@
 ```
 platforms: [
                 {
+                    "platform": "BrowserPlatform",
+                    "name": "Browser Controls",
+                    "sessionToken": "abcd",
+                    "ipAddress": "localhost",
+                    "portNumber": "3000",
+                    "exclude": ["safari"]
+                }
+                {
                     "platform": "PowerPlatform",
                     "name": "Unix Remote Controls",
                     "ipAddress": "192.168.1.4",
                     "portNumber": "3000",
-                    "token": "abcd"
+                    "sessionToken": "abcd",
+                    "exclude": ["shutdown"]
                 },
                 {
                     "platform": "MusicPlatform",
                     "name": "Unix Remote Controls",
                     "ipAddress": "192.168.1.4",
                     "portNumber": "3000",
-                    "token": "abcd"
+                    "sessionToken": "abcd",
+                    "exclude": []
                 }
     ]
 ```
