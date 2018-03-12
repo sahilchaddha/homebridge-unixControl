@@ -1,3 +1,7 @@
+//Accessories
+var googleChromeAccessory = require('./Accessories/resetGoogleChromeAccesory.js')
+var safariAccessory = require('./Accessories/resetSafariAccessory.js')
+
 
 function BrowserPlatform(log, config, api) {
     this.platformLogger = log
