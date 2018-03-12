@@ -1,10 +1,15 @@
+var container = require('../../Services/Container.js')
+const platformName = "SystemSpyPlatform"
+
+var availableAccesories = {
+}
 
 function SystemSpyPlatform(log, config, api) {
     this.platformLogger = log 
     this.platformConfig = config
     this.platformAPI = api
     this.accessories = []
-    registerAccesories()    
+    registerAccesories.call(this)  
 }
 
 SystemSpyPlatform.prototype.configureAccessory = function(accessory) {
@@ -25,7 +30,21 @@ SystemSpyPlatform.prototype.configurationRequestHandler = function(context, requ
 }
 
 function registerAccesories() {
+    var platform = this
+    var accesoryKeys = Object.keys(availableAccesories)
+    var excludedAccesories = []
 
+    if (platform.platformConfig != null && platform.platformConfig["exclude"] != null && platform.platformConfig.exclude.length > 0) {
+        excludedAccesories = platform.platformConfig.exclude
+    }
+
+    accesoryKeys.forEach(key => {
+        if (excludedAccesories.indexOf(key) > -1) {
+            platform.accessories.push(availableAccesories[key])
+        }
+    })
+
+    platform.platformAPI.registerPlatformAccessories(container.pluginName, platformName, platform.accessories)
 }
 
 module.exports = SystemSpyPlatform

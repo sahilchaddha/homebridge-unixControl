@@ -39,7 +39,7 @@ function registerAccesories() {
     var accesoryKeys = Object.keys(availableAccesories)
     var excludedAccesories = []
 
-    if (platform.platformConfig.exclude != null && platform.platformConfig.exclude.length > 0) {
+    if (platform.platformConfig != null && platform.platformConfig["exclude"] != null && platform.platformConfig.exclude.length > 0) {
         excludedAccesories = platform.platformConfig.exclude
     }
 
