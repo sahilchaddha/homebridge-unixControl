@@ -46,4 +46,7 @@ function registerAccesories() {
     platform.platformAPI.registerPlatformAccessories(container.pluginName, platformName, platform.accessories)
 }
 
-module.exports = MusicPlatform
+module.exports = {
+    name: platformName,
+    platform: MusicPlatform
+}

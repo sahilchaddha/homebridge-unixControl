@@ -47,4 +47,7 @@ function registerAccesories() {
     platform.platformAPI.registerPlatformAccessories(container.pluginName, platformName, platform.accessories)
 }
 
-module.exports = WifiPlatform
+module.exports = {
+    name: platformName,
+    platform: WifiPlatform
+}

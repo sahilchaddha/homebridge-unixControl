@@ -9,20 +9,20 @@ var customPlatform = require('../Platforms/Custom/CustomPlatform.js')
 var container = require('./Container.js')
 
 function PlatformService(homebridge) { 
-    container.set(homebridge)
+    container.homebridge.set(homebridge)
     //Registering Platforms
     this.addPlatforms(homebridge)
 }
 
 PlatformService.prototype.addPlatforms = function(homebridge) {
-    homebridge.registerPlatform(container.pluginName, "PowerPlatform", powerPlatform, true)
-    homebridge.registerPlatform(container.pluginName, "SystemStatsPlatform", systemStatsPlatform, true)
-    homebridge.registerPlatform(container.pluginName, "BrowserPlatform", browserPlatform, true)
-    homebridge.registerPlatform(container.pluginName, "WifiPlatform", wifiPlatform, true)
-    homebridge.registerPlatform(container.pluginName, "BluetoothPlatform", bluetoothPlatform, true)
-    homebridge.registerPlatform(container.pluginName, "SystemSpyPlatform", systemSpyPlatform, true)
-    homebridge.registerPlatform(container.pluginName, "MusicPlatform", musicPlatform, true)
-    homebridge.registerPlatform(container.pluginName, "CustomPlatform", true)
+    homebridge.registerPlatform(container.pluginName, browserPlatform.name, browserPlatform.platform, true)
+    homebridge.registerPlatform(container.pluginName, powerPlatform.name, powerPlatform.platform, true)
+    homebridge.registerPlatform(container.pluginName, systemStatsPlatform.name, systemStatsPlatform.platform, true)
+    homebridge.registerPlatform(container.pluginName, wifiPlatform.name, wifiPlatform.platform, true)
+    homebridge.registerPlatform(container.pluginName, bluetoothPlatform.name, bluetoothPlatform.platform, true)
+    homebridge.registerPlatform(container.pluginName, systemSpyPlatform.name, systemSpyPlatform.platform, true)
+    homebridge.registerPlatform(container.pluginName, musicPlatform.name, musicPlatform.platform, true)
+    homebridge.registerPlatform(container.pluginName, customPlatform.name, customPlatform.platform, true)
 }
 
 module.exports = PlatformService

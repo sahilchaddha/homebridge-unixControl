@@ -47,4 +47,7 @@ function registerAccesories() {
     platform.platformAPI.registerPlatformAccessories(container.pluginName, platformName, platform.accessories)
 }
 
-module.exports = PowerPlatform
+module.exports = {
+    name: platformName,
+    platform: PowerPlatform
+}

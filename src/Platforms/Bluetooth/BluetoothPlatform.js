@@ -47,4 +47,7 @@ function registerAccesories() {
     platform.platformAPI.registerPlatformAccessories(container.pluginName, platformName, platform.accessories)
 }
 
-module.exports = BluetoothPlatform
+module.exports = {
+    name: platformName,
+    platform: BluetoothPlatform
+}

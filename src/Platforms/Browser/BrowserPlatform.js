@@ -43,13 +43,21 @@ function registerAccesories() {
         excludedAccesories = platform.platformConfig.exclude
     }
 
+    var newAccessories = []
+
     accesoryKeys.forEach(key => {
-        if (excludedAccesories.indexOf(key) > -1) {
-            platform.accessories.push(availableAccesories[key])
+        if (excludedAccesories.indexOf(key) <= -1) {
+            newAccessories.push(new availableAccesories[key]())
         }
     })
+    
+    platform.accessories = platform.accessories.concat(newAccessories)
 
-    platform.platformAPI.registerPlatformAccessories(container.pluginName, platformName, platform.accessories)
+    console.log(platform.accessories)
+    platform.platformAPI.registerPlatformAccessories(container.pluginName, platformName, newAccessories)
 }
 
-module.exports = BrowserPlatform
+module.exports = {
+    name: platformName,
+    platform: BrowserPlatform
+}

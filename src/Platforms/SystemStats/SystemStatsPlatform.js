@@ -47,4 +47,7 @@ function registerAccesories() {
     platform.platformAPI.registerPlatformAccessories(container.pluginName, platformName, platform.accessories)
 }
 
-module.exports = SystemStatsPlatform
+module.exports = {
+    name: platformName,
+    platform: SystemStatsPlatform
+}

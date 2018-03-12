@@ -1,18 +1,20 @@
-var Service, Characteristic, Accessory, hap, UUIDGen
 const pluginName = "homebridge-unixcontrol"
 
 function Container() {
-    Service = null
-    Characteristic = null
-    Accessory = null
-    UUIDGen = null
+    this.Service = null
+    this.Characteristic = null
+    this.Accessory = null
+    this.UUIDGen = null
 }
 
 Container.prototype.set = function(homebridge) { 
-    Service = homebridge.hap.Service
-    Characteristic = homebridge.hap.Characteristic
-    Accessory = homebridge.platformAccessory
-    UUIDGen = homebridge.hap.uuid
+    this.Service = homebridge.hap.Service
+    this.Characteristic = homebridge.hap.Characteristic
+    this.Accessory = homebridge.platformAccessory
+    this.UUIDGen = homebridge.hap.uuid
 }
 
-module.exports = new Container()
+module.exports = {
+    pluginName: pluginName,
+    homebridge: new Container()
+}
