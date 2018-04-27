@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/sahilchaddha/homebridge-unixcontrol#readme",
   "dependencies": {
-    "request": "^2.83.0",
+    "request": "^2.85.0",
     "url": "^0.11.0"
   },
   "engines": {
